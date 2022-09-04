@@ -1,0 +1,11 @@
+class Solution {
+public:
+    void reverse(vector<char>& s,int right,int left){
+        if(left>=right) return ;
+        swap(s[left++],s[right--]);
+        reverse(s,right,left);
+    }
+    void reverseString(vector<char>& s) {
+        reverse(s,s.size()-1,0);
+    }
+};
